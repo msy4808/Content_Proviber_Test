@@ -9,7 +9,7 @@ import static android.content.ContentValues.TAG;
 
 
 
-public class ContentProvider extends ContentProvider {
+public class MyContentProvider extends ContentProvider {
 
     SQLiteDatabase db;
     static final String TABLE_NAME = "People";
@@ -41,7 +41,7 @@ public class ContentProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        DatabaseHelper
+        DatabaseHelper databaseHelper = new DatabaseHelper(getContext(), "DB", null,1);
         return false;
     }
 
