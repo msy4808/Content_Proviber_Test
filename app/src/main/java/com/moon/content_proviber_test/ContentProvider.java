@@ -5,6 +5,9 @@ import android.content.ContentValues;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
+import static android.content.ContentValues.TAG;
+
+
 
 public class ContentProvider extends ContentProvider {
 
@@ -38,7 +41,7 @@ public class ContentProvider extends ContentProvider {
 
     @Override
     public boolean onCreate() {
-        // TODO: Implement this to initialize your content provider on startup.
+        DatabaseHelper
         return false;
     }
 
