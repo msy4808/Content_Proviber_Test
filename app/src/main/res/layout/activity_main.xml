@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#3F51B5">
 
-    <TextView
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/age"
+        android:hint="name"/>
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/phone"
+        android:hint="age"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/insertButton"
+        android:hint="phone"/>
+
+    <Button
+        android:id="@+id/insertButton"
+        android:text="insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_above="@id/updateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#a0000000"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/updateButton"
+        android:text="update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/selectButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#a0000000"/>
+
+    <Button
+        android:id="@+id/selectButton"
+        android:text="select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/deleteButton"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#a0000000"/>
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:text="delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/scrollView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="#a0000000"/>
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/scrollView">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/resultText"
+                android:text=""
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </HorizontalScrollView>
+    </ScrollView>
+</RelativeLayout>
